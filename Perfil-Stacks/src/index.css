@@ -1,0 +1,129 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS (Tema Dark Moderno)
+   ========================================================================== */
+body {
+  background-color: #121212; /* Fundo grafite escuro */
+  color: #e0e0e0; /* Texto claro para dar leitura */
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
+
+/* Customização sutil da barra de rolagem */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0d6efd; /* Cor primária do Bootstrap no hover */
+}
+
+/* ==========================================================================
+   FOTO DE PERFIL (Ajuste de Alinhamento e Efeitos)
+   ========================================================================== */
+img[alt="Foto-de-perfil"] {
+  display: block;
+  margin: 3rem auto 1.5rem auto; /* Centraliza de verdade e dá espaçamento */
+  border-radius: 50%; /* Deixa redonda */
+  border: 4px solid #0d6efd; /* Borda com o azul do Bootstrap */
+  box-shadow: 0 8px 24px rgba(13, 110, 253, 0.2); /* Neon sutil azul */
+  object-fit: cover;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+img[alt="Foto-de-perfil"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px rgba(13, 110, 253, 0.4);
+}
+
+/* ==========================================================================
+   CARD PERFIL & TECH STACKS
+   ========================================================================== */
+h1 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+/* Efeito de flutuação nos ícones das tecnologias */
+.card-stacks img {
+  transition:
+    transform 0.2s ease-in-out,
+    filter 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.card-stacks img:hover {
+  transform: translateY(-8px); /* Faz o ícone "pular" */
+  filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.3)); /* Brilho no fundo */
+}
+
+/* ==========================================================================
+   SEÇÃO "ABOUT ME" (Dropdown Customizado)
+   ========================================================================== */
+.detalhes {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 20px;
+}
+
+/* Customizando o botão do Summary */
+.detalhes summary {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 12px 35px;
+  border-radius: 50px; /* Botão arredondado estilo cápsula */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  list-style: none; /* Remove a setinha padrão do HTML */
+}
+
+.detalhes summary::-webkit-details-marker {
+  display: none; /* Remove a setinha padrão no Chrome/Safari */
+}
+
+/* Caixa de texto do About Me */
+.detalhes h4 {
+  margin-top: 1.5rem;
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 16px;
+  border-left: 5px solid #0d6efd; /* Detalhe azul na esquerda */
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #b3b3b3;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================================
+   CAROUSEL DE PROJETOS
+   ========================================================================== */
+#carouselExampleAutoplaying {
+  max-width: 850px;
+  margin: 4rem auto 2rem auto;
+  border-radius: 16px;
+  overflow: hidden; /* Garante que a imagem não saia das bordas arredondadas */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  border: 1px solid #2d2d2d;
+}
+
+.carousel-item img {
+  height: 400px;
+  object-fit: cover; /* Não distorce as imagens do Freepik/Istock */
+}
+
+/* Ajuste nos botões de navegação do Carousel */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 12%; /* Área de clique um pouco mais confortável */
+}
