@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Card from "./components/CardPerfil";
 import CardProjects from "./components/Cardprojetos";
+import Career from "./components/historyCard";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       />
       <Card />
       <CardProjects />
+      <Career />
     </>
   );
 }

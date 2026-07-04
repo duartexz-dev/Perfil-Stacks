@@ -1,0 +1,396 @@
+/* ================= CONFIGURAÇÕES GERAIS ================= */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+:root {
+  --bg-primary: #0b0f19;
+  --bg-secondary: #131c2e;
+  --bg-card: #1e293b;
+  --accent-color: #3b82f6;
+  --accent-purple: #8b5cf6;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --gradient: linear-gradient(
+    135deg,
+    var(--accent-color),
+    var(--accent-purple)
+  );
+}
+
+.career {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(59, 130, 246, 0.15),
+    transparent 60%
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-tag {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero h1.text {
+  font-size: 4rem;
+  margin: 20px 0 10px;
+  font-weight: 700;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: var(--accent-purple);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+
+/* ================= INTERESSES (GRID HEXAGONAL ALTERNATIVO) ================= */
+.hex-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+.hex {
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hex:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.1);
+}
+
+.hex span {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.hex h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* ================= ROADMAP (TIMELINE) ================= */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.step {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background: var(--gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+}
+
+.card {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  border-left: 4px solid var(--accent-color);
+}
+
+.card h2 {
+  color: var(--accent-color);
+  margin-top: 0;
+}
+
+.card h3 {
+  margin: 5px 0 15px;
+  color: var(--text-main);
+}
+
+.card ul {
+  padding-left: 20px;
+  margin: 15px 0;
+  color: var(--text-muted);
+}
+
+.mini-project {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  margin-top: 20px;
+}
+
+.mini-project h4 {
+  margin-top: 0;
+  color: var(--accent-purple);
+}
+
+.line {
+  width: 4px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-left: 23px;
+}
+
+/* ================= PROJETOS ================= */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: 30px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  border-color: var(--accent-purple);
+  transform: scale(1.02);
+}
+
+.badge {
+  background: var(--gradient);
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 50px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.project-card h2 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.project-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ================= MICRO PROJETOS ================= */
+.micro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.micro-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.micro-card h3 {
+  color: var(--accent-color);
+  margin-top: 0;
+}
+
+.micro-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* ================= TECNOLOGIAS (SKILLS) ================= */
+.skills {
+  max-width: 700px;
+}
+
+.skill {
+  margin-bottom: 25px;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.progress {
+  background: var(--bg-secondary);
+  height: 12px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.value {
+  height: 100%;
+  background: var(--gradient);
+  border-radius: 50px;
+}
+
+/* Simulação de níveis de progresso das barras */
+.value.html {
+  width: 95%;
+}
+.value.css {
+  width: 90%;
+}
+.value.js {
+  width: 85%;
+}
+.value.react {
+  width: 75%;
+}
+
+/* ================= ESTATÍSTICAS ================= */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  background: var(--bg-secondary);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+}
+
+.stat h1 {
+  font-size: 3.5rem;
+  margin: 0;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat p {
+  color: var(--text-muted);
+  margin: 5px 0 0;
+}
+
+/* ================= OBJETIVO ================= */
+.goal {
+  text-align: center;
+  max-width: 800px;
+  background: radial-gradient(rgba(139, 92, 246, 0.1), transparent);
+  border-radius: 20px;
+}
+
+.goal h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.goal p {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: #070a12;
+}
+
+footer h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+footer p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 5px 0 0;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 768px) {
+  .hero h1.text {
+    font-size: 2.8rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .step {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .line {
+    display: none;
+  }
+}
