@@ -8,7 +8,7 @@ function CardProject() {
         <div className="col-md-4">
           <div className="card h-100 shadow">
             <img
-              src="/images/img-nexuspay.png"
+              src="./images/img-nexuspay.png"
               className="card-img-top"
               alt="Nexus Pay"
             />
@@ -61,7 +61,7 @@ function CardProject() {
         <div className="col-md-4">
           <div className="card h-100 shadow">
             <img
-              src="/images/img-focus.png"
+              src="./images/img-focus.png"
               className="card-img-top"
               alt="Focus"
             />
@@ -112,7 +112,7 @@ function CardProject() {
         <div className="col-md-4">
           <div className="card h-100 shadow">
             <img
-              src="/images/img-Code.flow.png"
+              src="./images/img-Code.flow.png"
               className="card-img-top"
               alt="CodeFlow"
             />
